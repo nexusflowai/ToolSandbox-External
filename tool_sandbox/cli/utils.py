@@ -20,6 +20,10 @@ from tool_sandbox.roles.anthropic_api_agent import (
     ClaudeOpusAgent,
     ClaudeSonnetAgent,
 )
+from tool_sandbox.roles.athene_v2_api_agent import (
+    AtheneV2AgentAPIAgent,
+    AtheneV2ChatAPIAgent,
+)
 from tool_sandbox.roles.base_role import BaseRole
 from tool_sandbox.roles.cli_role import CliAgent, CliUser
 from tool_sandbox.roles.cohere_agent import CohereAgent
@@ -43,6 +47,8 @@ from tool_sandbox.scenarios import named_scenarios
 
 
 class RoleImplType(StrEnum):
+    AtheneV2Agent = auto()
+    AtheneV2Chat = auto()
     Hermes = auto()
     Gorilla = auto()
     GPT_3_5_0125 = auto()
@@ -63,6 +69,12 @@ class RoleImplType(StrEnum):
 
 
 AGENT_TYPE_TO_FACTORY: dict[RoleImplType, Callable[..., BaseRole]] = {
+    RoleImplType.AtheneV2Agent: lambda: AtheneV2AgentAPIAgent(
+        model_name="Nexusflow/Athene-V2-Agent"
+    ),
+    RoleImplType.AtheneV2Chat: lambda: AtheneV2ChatAPIAgent(
+        model_name="Nexusflow/Athene-V2-Chat"
+    ),
     RoleImplType.Hermes: lambda: HermesAPIAgent(
         model_name="NousResearch/Hermes-2-Pro-Mistral-7B"
     ),
