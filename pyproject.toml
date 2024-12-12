@@ -44,7 +44,6 @@ dependencies = [
     "polars==0.20.31",
     "pydantic==2.7.4",
     "pyyaml==6.0.1",
-    "qwen-agent==0.0.13",
     "rapidfuzz==3.9.3",
     "requests==2.32.3",
     "rouge-score==0.1.2",
