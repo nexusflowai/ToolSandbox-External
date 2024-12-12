@@ -50,7 +50,6 @@ dependencies = [
     "rouge-score==0.1.2",
     "scipy==1.13.1",
     "sentencepiece==0.2.0",
-    "seval==1.1.0",
     "StrEnum==0.4.15",
     "tenacity==8.4.1",
     "transformers==4.41.2",
