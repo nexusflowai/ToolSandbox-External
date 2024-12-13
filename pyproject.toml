@@ -36,7 +36,7 @@ dependencies = [
     "jsonschema==4.23.0",
     "langchain==0.1.3",
     "networkx==3.2.1",
-    "nexusflowai==0.1.10",
+    "nexusflowai==0.1.11",
     "numpy==1.26.4",
     "openai==1.54.4",
     "phonenumbers==8.13.39",
